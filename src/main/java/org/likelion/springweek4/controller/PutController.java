@@ -12,14 +12,7 @@ import java.util.Map;
 public class PutController {
 
     // Map으로 받기
-    @PutMapping("/member")
-    public String putMember(@RequestBody Map<String, Object> putData) {
-        StringBuilder sb = new StringBuilder();
-        putData.entrySet().forEach(map -> {
-            sb.append(map.getKey() + " : " + map.getValue() + "\n");
-        });
-        return sb.toString();
-    }
+    // TODO: @RequestBody를 활용 + Map으로 받는 putMember() 작성
 
     // DTO로 받기 - String 반환
     @PutMapping("/member1")
@@ -28,16 +21,8 @@ public class PutController {
     }
 
     // DTO로 받기 - DTO 반환 (JSON 응답)
-    @PutMapping("/member2")
-    public MemberDto postMemberDto2(@RequestBody MemberDto memberDto) {
-        return memberDto;
-    }
+    // TODO: @RequestBody를 활용 + DTO로 받는 putMemberDto2() 작성
 
     // ResponseEntity 활용
-    @PutMapping("/member3")
-    public ResponseEntity<MemberDto> postMemberDto3(@RequestBody MemberDto memberDto) {
-        return ResponseEntity
-                .status(HttpStatus.ACCEPTED)
-                .body(memberDto);
-    }
+    // TODO: ResponseEntity 활용하는 putMemberDto3() 작성
 }
