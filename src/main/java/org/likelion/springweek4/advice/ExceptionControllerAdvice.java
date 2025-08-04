@@ -1,4 +1,4 @@
-//package org.likelion.springweek4.advice;
+package org.likelion.springweek4.advice;
 //
 //import org.likelion.springweek4.dto.ErrorDetails;
 //import org.likelion.springweek4.exception.NotEnoughMoneyException;
