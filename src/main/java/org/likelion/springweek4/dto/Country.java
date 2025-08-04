@@ -6,12 +6,7 @@ public class Country {
     private int population;
 
     // 정적 팩토리 메서드 (객체 생성을 편리하게)
-    public static Country of(String name, int population) {
-        Country country = new Country();
-        country.setName(name);
-        country.setPopulation(population);
-        return country;
-    }
+    // TODO: 정적 팩토리 메서드인 Country of() 작성
 
     // getter와 setter (JSON 변환을 위해 필수!)
     public String getName() {

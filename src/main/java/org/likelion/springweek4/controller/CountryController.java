@@ -12,30 +12,12 @@ import java.util.List;
 public class CountryController {
 
     // 단일 객체 반환
-    @GetMapping("/france")
-    public Country france() {
-        Country c = Country.of("France", 67);
-        return c;  // ✨ 자동으로 JSON 변환!
-    }
+    // TODO: 단일 객체 반환하는 france() 작성
 
     // 컬렉션 반환 (배열 형태의 JSON으로 변환됨)
-    @GetMapping("/all")
-    public List<Country> countries() {
-        Country c1 = Country.of("France", 67);
-        Country c2 = Country.of("Spain", 47);
-        return List.of(c1, c2);  // ✨ JSON 배열로 자동 변환!
-    }
+    // TODO: 컬렉션 반환하는 all() 작성
 
     // 📍 위치: src/main/java/org/likelion/springweek4/controller/CountryController.java
     // ✨ 새로 추가되는 ResponseEntity 메서드들
-    @GetMapping("/france-custom")
-    public ResponseEntity<Country> franceCustom() {
-        Country c = Country.of("France", 67);
-        return ResponseEntity
-                .status(HttpStatus.ACCEPTED)  // 202 Accepted 상태 코드
-                .header("continent", "Europe")  // 커스텀 헤더 추가
-                .header("capital", "Paris")
-                .header("favorite_food", "cheese and wine")
-                .body(c);  // 응답 본문 설정
-    }
+    // TODO: ResponseEntity 메서드 - franceCustom() 작성
 }
