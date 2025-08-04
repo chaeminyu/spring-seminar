@@ -7,14 +7,8 @@ import org.springframework.web.bind.annotation.*;
 public class DeleteController {
 
     // PathVariable 사용
-    @DeleteMapping(value = "/{variable}")
-    public String DeleteVariable(@PathVariable String variable) {
-        return variable;
-    }
+    // TODO: PathVariable 활용하는 DeleteVariable() 작성
 
     // RequestParam 사용
-    @DeleteMapping(value = "/request1")
-    public String getRequestParam1(@RequestParam String email) {
-        return "e-mail : " + email;
-    }
+    // TODO: RequestParam 활용하는 getRequestParam1() 작성
 }
