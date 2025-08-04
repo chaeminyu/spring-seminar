@@ -12,6 +12,7 @@ public class PostController {
 
     // Map으로 받기
     // TODO: @RequestBody를 활용 + Map으로 받는 postMember() 작성
+    // TODO (5장 Swagger): @Operation/@ApiResponses/@Parameters 어노테이션 추가
 
     // DTO로 받기
     // TODO: @RequestParam을 활용 + DTO로 받는 getRequestParam2() 작성

@@ -7,6 +7,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/get-api")
+// TODO (5장 Swagger): @Tag 어노테이션 추가
 public class GetController {
 
     // http://localhost:8080/api/v1/get-api/variable1/hello

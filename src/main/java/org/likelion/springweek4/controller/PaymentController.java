@@ -12,30 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 // 📍 방법 1 (방법 1 코드를 지우고 방법 2 코드로 채우세요!)
 @RestController
 public class PaymentController {
-    private final PaymentService paymentService;
+    // TODO: PaymentController 클래스를 방법 1대로 작성하세요~!
+    // TODO: 방법 1대로 작성한 뒤, 방법 1을 전부 삭제하고 방법 2대로 작성하세요~!
 
-    public PaymentController(PaymentService paymentService) {
-        this.paymentService = paymentService;
-    }
 
-    @PostMapping("/payment")
-    public ResponseEntity<?> makePayment() {
-        try {
-            PaymentDetails paymentDetails = paymentService.processPayment();
-
-            // 성공 시: Accepted 상태와 PaymentDetails 반환
-            return ResponseEntity
-                    .status(HttpStatus.ACCEPTED)
-                    .body(paymentDetails);
-
-        } catch (NotEnoughMoneyException e) {
-            // 예외 발생 시: Bad Request 상태와 ErrorDetails 반환
-            ErrorDetails errorDetails = new ErrorDetails();
-            errorDetails.setMessage("Not enough money to make the payment");
-
-            return ResponseEntity
-                    .badRequest()
-                    .body(errorDetails);
-        }
-    }
 }
