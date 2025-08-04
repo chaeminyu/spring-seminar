@@ -19,22 +19,11 @@ public class ResponseExampleController {
     }
 
     // 2. 생성 응답 (201 Created)
-    @PostMapping("/create")
-    public ResponseEntity<Country> create() {
-        Country country = Country.of("Korea", 51);
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .body(country);
-    }
+    // TODO: 201 created를 반환하는 create() 작성
 
     // 3. 허용됨 응답 (202 Accepted)
-    @PutMapping("/update")
-    public ResponseEntity<Country> update() {
-        Country country = Country.of("Updated Country", 100);
-        return ResponseEntity
-                .accepted()  // 202 Accepted 상태 코드
-                .body(country);
-    }
+    // TODO: 202 accepted를 반환하는 update() 작성
+
 
     // 4. 잘못된 요청 (400 Bad Request)
     @GetMapping("/bad-request")
@@ -45,13 +34,6 @@ public class ResponseExampleController {
     }
 
     // 5. 헤더와 함께 응답
-    @GetMapping("/with-headers")
-    public ResponseEntity<Country> withHeaders() {
-        Country country = Country.of("France", 67);
+    // TODO: 헤더와 함께 응답하는 withHeaders() 작성
 
-        return ResponseEntity.ok()
-                .header("Custom-Header", "Custom-Value")
-                .header("Cache-Control", "no-cache")
-                .body(country);
-    }
 }
