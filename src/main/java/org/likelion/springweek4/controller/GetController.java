@@ -26,8 +26,5 @@ public class GetController {
 
 
     // http://localhost:8080/api/v1/get-api/request3?name=value1&email=value2&organization=value3
-    @GetMapping("/request3")
-    public String getRequestParam3(MemberDto memberDto) {
-        return memberDto.toString();
-    }
+    // TODO: DTO를 활용한 getRequestParam3() 작성
 }
