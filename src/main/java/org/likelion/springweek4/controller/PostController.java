@@ -8,24 +8,11 @@ import java.util.Map;
 public class PostController {
 
     // http://localhost:8080/api/v1/post-api/domain
-    @PostMapping(value = "/domain")
-    public String postExample() {
-        return "Hello Post API!";
-    }
+    // TODO: 기본 POST 컨트롤러 작성
 
     // Map으로 받기
-    @PostMapping("/member")
-    public String postMember(@RequestBody Map<String, Object> postData) {
-        StringBuilder sb = new StringBuilder();
-        postData.entrySet().forEach(map -> {
-            sb.append(map.getKey() + " : " + map.getValue() + "\n");
-        });
-        return sb.toString();
-    }
+    // TODO: @RequestBody를 활용 + Map으로 받는 postMember() 작성
 
     // DTO로 받기
-    @PostMapping("/member2")
-    public String postMemberDto(@RequestBody MemberDto memberDto) {
-        return memberDto.toString();
-    }
+    // TODO: @RequestParam을 활용 + DTO로 받는 getRequestParam2() 작성
 }
