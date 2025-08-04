@@ -10,35 +10,20 @@ import java.util.Map;
 public class GetController {
 
     // http://localhost:8080/api/v1/get-api/variable1/hello
-    @GetMapping("/variable1/{variable}")
-    public String getVariable1(@PathVariable String variable) {
-        return variable;
-    }
+    // TODO: @PathVariable을 활용한 getvariable1() 작성
+
 
     // 변수명이 다를 때
-    @GetMapping("/variable2/{variable}")
-    public String getVariable2(@PathVariable("variable") String var) {
-        return var;
-    }
+    // TODO: @PathVariable을 활용한 getvariable2() 작성
+
 
     // http://localhost:8080/api/v1/get-api/request1?name=value1&email=value2&organization=value3
-    @GetMapping("/request1")
-    public String getRequestParam1(
-            @RequestParam String name,
-            @RequestParam String email,
-            @RequestParam String organization) {
-        return name + " " + email + " " + organization;
-    }
+    // TODO: @RequestParam을 활용한 getRequestParam1() 작성
+
 
     // Map으로 받기 (매개변수가 일정하지 않을 때)
-    @GetMapping("/request2")
-    public String getRequestParam2(@RequestParam Map<String, String> param) {
-        StringBuilder sb = new StringBuilder();
-        param.entrySet().forEach(map -> {
-            sb.append(map.getKey() + " : " + map.getValue() + "\n");
-        });
-        return sb.toString();
-    }
+    // TODO: @RequestParam을 활용한 getRequestParam2() 작성
+
 
     // http://localhost:8080/api/v1/get-api/request3?name=value1&email=value2&organization=value3
     @GetMapping("/request3")
