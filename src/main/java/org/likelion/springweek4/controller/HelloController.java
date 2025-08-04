@@ -9,14 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     // http://localhost:8080/api/v1/get-api/hello
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello World!";
-    }
+    // TODO: hello() 작성
 
-    @GetMapping("/ciao")
-    public String ciao() {
-        return "Ciao!";
-    }
+    // TODO: ciao() 작성
 }
 
